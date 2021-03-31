@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="484.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowController">
+   <children>
+      <Label layoutX="213.0" layoutY="14.0" text="Borrow Form">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbISBN" labelFloat="true" layoutX="31.0" layoutY="76.0" promptText="ISBN" />
+      <JFXComboBox fx:id="cmbMemberID" labelFloat="true" layoutX="244.0" layoutY="76.0" onAction="#cmbMemberIDOnAction" promptText="Member ID" />
+      <JFXTextField fx:id="txtState" labelFloat="true" layoutX="31.0" layoutY="136.0" promptText="State" />
+      <TableView fx:id="tblBorrow" layoutX="31.0" layoutY="334.0" prefHeight="123.0" prefWidth="528.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ISBN" />
+          <TableColumn prefWidth="75.0" text="Member ID" />
+            <TableColumn prefWidth="75.0" text="Fine" />
+            <TableColumn prefWidth="75.0" text="Due Date" />
+            <TableColumn prefWidth="75.0" text="State" />
+            <TableColumn prefWidth="75.0" text="Issued Date" />
+            <TableColumn prefWidth="75.0" text="Return Date" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" layoutX="438.0" layoutY="270.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #0aff23;" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="375.0" layoutY="270.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #2ca7e0;" text="Update" />
+      <JFXButton fx:id="btnClear" layoutX="257.0" layoutY="270.0" onAction="#btnClearOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #2ca7e0;" text="Clear" />
+      <JFXButton fx:id="btnDelete" layoutX="498.0" layoutY="270.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #e40000;" text="Delete" />
+      <JFXTextField fx:id="txtISBN" layoutX="116.0" layoutY="76.0" onAction="#txtISBNOnAction" prefHeight="25.0" prefWidth="117.0" promptText="ISBN" />
+      <AnchorPane layoutX="368.0" layoutY="61.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #cccccc;">
+         <children>
+            <JFXTextField fx:id="txtFine" labelFloat="true" layoutX="15.0" layoutY="88.0" promptText="Fine" />
+            <JFXDatePicker fx:id="txtReturnDatee" layoutX="15.0" layoutY="22.0" promptText="Return Date" />
+         </children>
+      </AnchorPane>
+      <JFXDatePicker fx:id="txtIssuedDateee" layoutX="197.0" layoutY="136.0" promptText="Issued Date" />
+      <JFXDatePicker fx:id="txtDueDatee" layoutX="31.0" layoutY="198.0" promptText="Due Date" />
+      <JFXButton fx:id="btnReturn" layoutX="316.0" layoutY="270.0" onAction="#btnReturnOnAction" style="-fx-background-color: #2ca7e0;" text="Return" />
+      <JFXButton fx:id="btnSearch" layoutX="197.0" layoutY="270.0" onAction="#btnSearchOnAction" style="-fx-background-color: #2ca7e0;" text="Search" />
+   </children>
+</AnchorPane>

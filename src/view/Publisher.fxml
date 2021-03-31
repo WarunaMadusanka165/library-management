@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="484.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PublisherController">
+   <children>
+      <Label layoutX="204.0" layoutY="23.0" text="Publisher Form" underline="true">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtPublisherID" labelFloat="true" layoutX="41.0" layoutY="102.0" onAction="#txtPublisherIDOnAction" promptText="Publisher ID" />
+      <JFXTextField fx:id="txtPublisherAddress" labelFloat="true" layoutX="41.0" layoutY="164.0" prefHeight="25.0" prefWidth="444.0" promptText="Name" />
+      <JFXTextField fx:id="txtPublisherName" labelFloat="true" layoutX="41.0" layoutY="226.0" prefHeight="25.0" prefWidth="444.0" promptText="Address" />
+      <TableView fx:id="tblPublisher" layoutX="30.0" layoutY="315.0" prefHeight="107.0" prefWidth="523.0">
+        <columns>
+          <TableColumn prefWidth="167.0" text="ID" />
+          <TableColumn prefWidth="182.0" text="Address" />
+            <TableColumn prefWidth="219.0" text="Name" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" layoutX="320.0" layoutY="266.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #05f815;" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" layoutX="383.0" layoutY="266.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #22e2fb;" text="Update">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnClear" layoutX="452.0" layoutY="266.0" onAction="#btnClearOnAction" style="-fx-background-color: #d014dd;" text="Clear">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="518.0" layoutY="266.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #ff0000;" text="Delete">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

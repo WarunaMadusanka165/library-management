@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="516.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardController">
+   <children>
+      <AnchorPane fx:id="pane" layoutX="125.0" layoutY="15.0" prefHeight="484.0" prefWidth="596.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="484.0" fitWidth="596.0" layoutX="4.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/lib2.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <VBox layoutX="5.0" layoutY="15.0" prefHeight="491.0" prefWidth="117.0" style="-fx-background-color: #c9c9c9;">
+         <children>
+            <JFXButton fx:id="btnDashBoard" onAction="#btnDashBoardOnAction" prefHeight="107.0" prefWidth="120.0" text="DashBoard">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBook" onAction="#btnBookOnAction" prefHeight="104.0" prefWidth="120.0" text="Book">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnMember" onAction="#btnMemberOnAction" prefHeight="100.0" prefWidth="115.0" text="Member">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnPublisher" onAction="#btnPublisherOnAction" prefHeight="98.0" prefWidth="120.0" text="Publisher">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnBorrow" onAction="#btnBorrowOnAction" prefHeight="108.0" prefWidth="120.0" text="Borrow">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

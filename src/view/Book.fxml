@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="484.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BookController">
+   <children>
+      <Label layoutX="252.0" layoutY="8.0" text="Book">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtISBN" labelFloat="true" layoutX="41.0" layoutY="84.0" onAction="#txtISBNOnAction" promptText="ISBN" />
+      <JFXTextField fx:id="txtTitle" labelFloat="true" layoutX="298.0" layoutY="200.0" prefHeight="25.0" prefWidth="252.0" promptText="Title" />
+      <JFXTextField fx:id="txtAuthor" labelFloat="true" layoutX="41.0" layoutY="143.0" prefHeight="25.0" prefWidth="216.0" promptText="Author" />
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="298.0" layoutY="143.0" prefHeight="25.0" prefWidth="199.0" promptText="Qty" />
+      <JFXTextField fx:id="txtPrice" labelFloat="true" layoutX="41.0" layoutY="200.0" prefHeight="25.0" prefWidth="216.0" promptText="Price" />
+      <TableView fx:id="tblBook" layoutX="28.0" layoutY="319.0" prefHeight="143.0" prefWidth="526.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ISBN" />
+          <TableColumn prefWidth="75.0" text="Publish ID" />
+            <TableColumn prefWidth="97.0" text="Title" />
+            <TableColumn prefWidth="83.0" text="Author" />
+            <TableColumn prefWidth="95.0" text="Qty" />
+            <TableColumn prefWidth="100.0" text="Price" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnSave" layoutX="268.0" layoutY="258.0" onAction="#btnSaveOnAction" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #00ff5d;" text="Save" />
+      <JFXButton fx:id="btnUpdate" layoutX="336.0" layoutY="258.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #00eeff;" text="Update" />
+      <JFXButton fx:id="btnClear" layoutX="413.0" layoutY="258.0" onAction="#btnClearOnAction" style="-fx-background-color: #ff00e5;" text="Clear" />
+      <JFXButton fx:id="btnDelete" layoutX="482.0" layoutY="258.0" onAction="#btnDeleteOnAction" style="-fx-background-color: #e70000;" text="Delete" textFill="#111010" />
+      <JFXComboBox fx:id="cmbPubID" labelFloat="true" layoutX="301.0" layoutY="84.0" promptText="Publisher ID" />
+      <JFXTextField fx:id="txtpubID" labelFloat="true" layoutX="301.0" layoutY="109.0" promptText="Publisher ID" />
+   </children>
+</AnchorPane>

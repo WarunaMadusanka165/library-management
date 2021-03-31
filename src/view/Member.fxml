@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="484.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MemberController">
+   <children>
+      <Label layoutX="191.0" layoutY="14.0" text="Member Form" underline="true">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtMemberID" labelFloat="true" layoutX="39.0" layoutY="87.0" onAction="#txtMemberIDOnAction" prefHeight="25.0" prefWidth="261.0" promptText="Member ID" />
+      <JFXTextField fx:id="txtMemberName" labelFloat="true" layoutX="39.0" layoutY="143.0" prefHeight="25.0" prefWidth="261.0" promptText="Name" />
+      <JFXTextField fx:id="txtMemberAddress" labelFloat="true" layoutX="39.0" layoutY="197.0" prefHeight="25.0" prefWidth="261.0" promptText="Address" />
+      <JFXTextField fx:id="txtMemberContact" labelFloat="true" layoutX="39.0" layoutY="249.0" prefHeight="25.0" prefWidth="261.0" promptText="Contact Number" />
+      <TableView fx:id="tblMember" layoutX="14.0" layoutY="344.0" prefHeight="119.0" prefWidth="552.0">
+        <columns>
+          <TableColumn prefWidth="121.0" text="ID" />
+          <TableColumn prefWidth="148.0" text="Name" />
+            <TableColumn prefWidth="133.0" text="Address" />
+            <TableColumn prefWidth="148.0" text="Contact" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnMemberSave" layoutX="308.0" layoutY="290.0" onAction="#btnMemberSaveOnAction" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #00f435;" text="Save" />
+      <JFXButton fx:id="btnMemberUpdate" layoutX="382.0" layoutY="290.0" onAction="#btnMemberUpdateOnAction" style="-fx-background-color: #00ccff;" text="Update" />
+      <JFXButton fx:id="btnMemberDelete" layoutX="453.0" layoutY="290.0" onAction="#btnMemberDeleteOnAction" style="-fx-background-color: #ff0000;" text="Delete" textFill="#030303" />
+      <JFXButton fx:id="btnMemberClear" layoutX="520.0" layoutY="290.0" onAction="#btnMemberClearOnAction" style="-fx-background-color: #e500ff;" text="Clear" />
+   </children>
+</AnchorPane>

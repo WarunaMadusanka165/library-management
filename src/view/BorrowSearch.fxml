@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BorrowSearchController">
+   <children>
+      <JFXTextField labelFloat="true" layoutX="33.0" layoutY="44.0" promptText="Member ID" />
+      <TableView layoutX="33.0" layoutY="100.0" prefHeight="266.0" prefWidth="544.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ISBN" />
+          <TableColumn prefWidth="84.0" text="Member ID" />
+            <TableColumn prefWidth="66.0" text="Fine" />
+            <TableColumn prefWidth="75.0" text="Due Date" />
+            <TableColumn prefWidth="69.0" text="State" />
+            <TableColumn prefWidth="86.0" text="Issued Date" />
+            <TableColumn prefWidth="88.0" text="Return Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
